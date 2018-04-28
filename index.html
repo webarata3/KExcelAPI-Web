@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- 使ったツールとか -->
+
+  <!-- logo -->
+  <!-- https://www.designevo.com/ -->
+
+  <!-- favicon -->
+  <!-- https://www.webcreatorbox.com/tech/favicon -->
+  <!-- https://realfavicongenerator.net/ -->
+
+  <!-- コードをHTMLに -->
+  <!-- http://www.netyasun.com/syntaxhighlighter/source-escape.html -->
+
+  <!-- コードに色付け -->
+  <!-- https://github.com/google/code-prettify -->
+
+  <!-- headに書く要素まとめ -->
+  <!-- http://coliss.com/articles/build-websites/operation/work/list-of-head-elements.html -->
+
+  <meta name="description" content="Kotlin用のApache POIのラッパーライブラリーの紹介ページです。">
+
+  <title>KExcelAPI</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="KExcelAPI"/>
+  <meta property="og:description" content="Kotlin用のApache POIのラッパーライブラリーの紹介ページです。"/>
+  <meta property="og:url" content="https://webarata3.github.io/KExcelAPI/"/>
+  <meta property="og:site_name" content="KExcelAPI"/>
+  <meta property="og:image" content="https://webarata3.github.io/KExcelAPI/image/og.png"/>
+  <meta property="og:locale" content="ja_JP"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@webarata3"/>
+  <meta name="twitter:title" content="KExcelAPI"/>
+  <meta name="twitter:url" content="https://webarata3.github.io/KExcelAPI/"/>
+  <meta name="twitter:description" content="Kotlin用のApache POIのラッパーライブラリーの紹介ページです。"/>
+  <meta name="twitter:image" content="https://webarata3.github.io/KExcelAPI/image/logo.png"/>
+ </head>
+ <body>
+  <header>
+   <div class="logo"><a href="https://webarata3.github.io/KExcelAPI/">KExcelAPI</a></div>
+  </header>
+  <main>
+   <article>
+
+    <div class="title">
+     <h1>
+      <img src="image/logo.png">
+      <div>KExcelAPI</div>
+     </h1>
+     <div class="logo-made">Logo made with <a href="https://
+www.designevo.com/" title="Free Online Logo Maker">DesignEvo</a></div>
+     <div class="subTitle">みんなが大好きなExcelをKotlin + POIでより快適に</div>
+     <div class="titleLink"><a href="https://github.com/webarata3/KExcelAPI" class="GitHub"><span
+      class="fa fa-github"></span>GitHub</a></div>
+     <div class="snsButton">
+      <!-- facebook -->
+      <!-- https://developers.facebook.com/docs/plugins/like-button -->
+      <div id="fb-root"></div>
+      <div class="fb-like" data-href="https://webarata3.github.io/KExcelAPI/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+      <script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.10';
+       fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <!-- Twitter -->
+      <!-- https://about.twitter.com/ja/resources/buttons -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="webarata3">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <!-- はてブ -->
+      <!-- http://b.hatena.ne.jp/guide/bbutton -->
+      <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-normal" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+      <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+      <!-- Pocket -->
+      <!-- https://getpocket.com/publisher/button -->
+      <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+     </div>
+    </div>
+    <section>
+     <h2>セルへのアクセスはA1、B2等のラベルでOK</h2>
+     <div>
+      <div class="description">
+       <p>セルへのアクセスは、シートに対してラベル（A1やB2）もしくはインデックスを指定します。そのセルに対してtoInt、toDouble、toStr等のメソッドを使いデータを取得します。</p>
+      </div>
+      <div>
+       <pre class="prettyprint linenums"><code class="lang-kotlin">KExcel.open("book1.xlsx").use { workbook ->
+    val sheet = workbook[0]
+
+    // セルの読み込み
+    // セル名でのアクセス
+    println("""B2=${sheet["B2"].toStr()}""")
+
+    // インデックスでのアクセス
+    println("println("B2=${sheet[2, 1].toInt()}");");
+}</code></pre>
+      </div>
+     </div>
+    </section>
+    <section>
+     <h2>データの書き込みはもっと簡単</h2>
+     <div>
+      <div class="description">
+       <p>セルへのデータの書き込みはデータ型を意識する必要はありません。指定したセルに対して値を代入するだけです。</p>
+      </div>
+      <div>
+       <pre class="prettyprint linenums"><code class="lang-kotlin">KExcel.open("book1.xlsx").use { workbook ->
+    val sheet = workbook[0]
+
+    // セルの書き込み
+    sheet["A1"] = "あいうえお"
+    sheet[3, 7] = 123
+
+    // ファイルの書き込みも簡単に
+    KExcel.write(workbook, "book2.xlsx")
+}</code></pre>
+      </div>
+     </div>
+    </section>
+    <section>
+     <h2>使い方</h2>
+     <div>
+      <div class="description">
+       <p>Gradleにリポジトリーを追加してライブラリーを読み込みます。依存しているのは<a href="https://poi.apache.org/">POIのライブラリー</a>だけです。</p>
+       <p>ライブラリーの準備ができたら、使いたいソースで、「import link.webarata3.kexcelapi.*」します。</p>
+      </div>
+      <div>
+       <pre class="prettyprint linenums"><code class="lang-gradle">dependencies {
+    compile 'link.webarata3.kexcelapi:kexcelapi:0.5.1'
+}</code></pre>
+       <pre class="prettyprint linenums"><code class="lang-kotlin">import link.webarata3.kexcelapi.*</code></pre>
+      </div>
+     </div>
+    </section>
+   </article>
+  </main>
+  <footer>
+   <div>
+    <div class="copyright">© 2017 <a href="https://webarata3.link">Shinichi ARATA（webarata3）</a></div>
+    <div>
+     <ul>
+      <li><a href="https://twitter.com/webarata3"><span class="fa fa-twitter"></span></a></li>
+      <li><a href="https://facebook.com/arata.shinichi"><span class="fa fa-facebook"></span></a></li>
+      <li><a href="https://github.com/webarata3"><span class="fa fa-github"></span></a></li>
+      <li><a href="https://ja.stackoverflow.com/users/2214/webarata3?tab=profile"><span
+       class="fa fa-stack-overflow"></span></a></li>
+     </ul>
+    </div>
+   </div>
+  </footer>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+ </body>
+</html>

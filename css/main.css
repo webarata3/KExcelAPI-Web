@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+:root {
+  --brand-color: #338251;
+  --font-color: #597a57;
+  --page-width: 1200px;
+  --side-margin: 50px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family:
+    'ヒラギノ丸ゴ Pro W4', 'Hiragino Maru Gothic Pro',
+    'UD デジタル 教科書体 N-R', Meiryo, 'メイリオ',
+    'Lucida Grande', Verdana, Osaka, sans-serif;  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #fff;
+  color: var(--font-color);
+  display: flex;
+  font-size: 16px;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: underline;
+}
+
+a:link, a:visited {
+}
+
+a:hover, a:active {
+  color: #f00;
+}
+
+/* ヘッダー */
+
+header {
+  padding: 10px var(--side-margin);
+}
+
+.logo {
+  font-size: 1.6rem;
+}
+
+.logo a, .logo a:link, .logo a:visited, .logo a:hover, .logo a:active {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+
+/* メイン */
+main {
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: var(--page-width);
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto 100px auto;
+}
+
+.snsButton {
+  margin-top: 15px;
+}
+
+.pocket-btn {
+  display: inline-block;
+}
+
+.logo-made {
+  font-size: 0.6rem !important;
+  font-weight: 300 !important;
+  line-height: 1rem;
+}
+
+h1 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 img {
+  display: block;
+  margin-bottom: 0;
+  width: 200px;
+}
+
+h1 div {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 3rem;
+  margin-left: 10px;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin: 13px 5px 5px 5px;
+}
+
+.titleLink {
+  margin: 15px 5px 5px 5px;
+}
+
+.GitHub {
+  color: var(--brand-color);
+  border: solid 1px var(--brand-color);
+  border-radius: 1em;
+  font-size: 1.3rem;
+  padding: 3px 1em;
+  text-decoration: none;
+}
+
+.GitHub span {
+  margin-right: 0.2em;
+}
+
+.GitHub:hover, .GitHub:active {
+  border: solid 1px #f00;
+  color: #f00;
+  transition: 0.7s all;
+}
+
+section {
+  background: linear-gradient(to bottom, #fff 1%, #edfff4, #fff);
+  margin-bottom: 40px;
+  padding: 50px var(--side-margin);
+}
+
+section > div {
+  display: flex;
+}
+
+section > div > div {
+  margin: 0 10px;
+  width: 50%;
+}
+
+.description {
+  line-height: 2rem;
+}
+
+section pre:nth-child(2) {
+  margin-top: 20px;
+}
+
+/* フッター */
+
+footer {
+  background-color: #454545;
+  color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  max-width: var(--page-width);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.copyright {
+  flex: 1 1 auto;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer li {
+  display: inline-block;
+  width: 1.6em;
+}
+
+footer a {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+footer a:hover, footer a:active {
+  color: #fff;
+}
+
+/* ソースコードの色付け */
+/* https://github.com/google/code-prettify */
+
+.prettyprint {
+  /*min-width: 500px;*/
+}
+
+code {
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L4,
+li.L5, li.L6, li.L7, li.L8, li.L9 {
+  color: #000;
+  font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: 0.8rem;
+  list-style-type: decimal !important;
+  margin-left: 3em;
+  padding-left: 16px;
+}
+
+/* スマホ */
+@media screen and (max-width: 640px) {
+  body {
+    display: block;
+  }
+
+  header {
+    padding: 10px calc(var(--side-margin) / 3);
+  }
+
+  section {
+    padding: 50px calc(var(--side-margin) / 3);
+  }
+
+  footer {
+    padding: 10px calc(var(--side-margin) / 3);
+  }
+
+  section > div {
+    display: block;
+  }
+
+  section > div > div {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+  }
+
+  .prettyprint {
+    overflow: scroll;
+    word-wrap: normal;
+  }
+
+  footer > div {
+    display: block;
+  }
+
+  footer > div > div:last-child {
+    margin-top: 10px;
+  }
+
+  footer ul {
+    display: block;
+  }
+}
